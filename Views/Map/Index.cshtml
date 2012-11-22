@@ -1,0 +1,124 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Index</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <link type="text/css" href="/Assets/css/styles.css" rel="StyleSheet" />
+    <style type="text/css">
+        html
+        {
+            height: 100%;
+        }
+        body
+        {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        #map_canvas
+        {
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapperDiv">
+        <div class="header">
+            <h1>
+                PoC</h1>
+        </div>
+        <div class="contentWrapper">
+            <div class="ltContent">
+                <h1>
+                    Leads</h1>
+                <div style="padding: 5px">
+                    <select multiple="multiple" size="10" width="100%" id="chkPlaces">
+                        <option value="Canada, Alberta, 75 Street Edmonton;pointer_green03.png" class="mystyle">
+                            >> 75 Street Edmonton, Alberta, Canada</option>
+                        <option value="Canada, Calgary, Avenue Southeast;pointer_green03.png">>> Avenue Southeast,
+                            Calgary, Canada</option>
+                        <option value="Canada, Vancouver, British Columbia;pointer_red03.png">>> British Columbia,
+                            Vancouver, Canada</option>
+                        <option value="Canada, Sunwapta Falls, Alberta;pointer_red03.png">>> Sunwapta Falls, Alberta,
+                            Canada</option>
+                        <option value="Canada, Lake Louise, Alberta;pointer_green03.png">>> Lake Louise, Alberta,
+                            Canada</option>
+                        <option value="Canada, Canmore, Alberta;pointer_green03.png">>> Canmore, Alberta, Canada</option>
+                        <option value="Canada, 105 Miette Avenue Jasper, Alberta;pointer_green03.png">>> 105 Miette Avenue Jasper, Alberta, Canada</option>
+                        <option value="Canada, Prince George, British Columbia;pointer_red03.png">>> British Columbia,
+                            Prince George, Canada</option>
+                        <option value="Canada, Grande Cache, Alberta;pointer_green03.png">>> Grande Cache, Alberta, Canada</option>
+                        <option value="Canada, 607 Connaught Dr, Jasper, Alberta;pointer_green03.png">>> 607 Connaught Dr, Jasper, Alberta, Canada</option>
+                        @*<option value="Canada, Valemount, British Columbia;pointer_red03.png">>> British Columbia,
+                            Valemount, Canada</option>
+                            <option value="Canada, 16 W McBride, British Columbia;pointer_red03.png">>> British Columbia,
+                            16 W McBride, Canada</option>*@
+                    </select>
+                    <div class="alignCenter btnDiv">
+                        <input type="button" id="btnShowMap" value="Show in map" />
+                    </div>
+                </div>
+            </div>
+            <div class="rtContent">
+                <div id="map_canvas" class="mapDiv" style="position: relative">
+                    @* <div class="legendButtons" style="">
+                        <label>
+                            Label</label>
+                        <img src="Assets/images/on.png" /><br />
+                        <label>
+                            Label</label>
+                        <img src="Assets/images/off.png" />
+                    </div>*@ @*<img src="images/map.png" width="100%" />*@
+                </div>
+                <div class="customersDiv">
+                    <div class="customers">
+                        <h2>
+                            Assigned Leads</h2>
+                        <div style="padding: 5px">
+                            <ul id="ulCustomerAddresses">
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="prospectiveCustomers">
+                        <h2>
+                            UnAssigned Leads</h2>
+                        <div style="padding: 5px">
+                            <ul id="ulProspectAddresses">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div />
+        </div>
+    </div>
+    @*<div id="map_canvas" style="width: 500px; height: 400px;">
+    </div>*@
+    <br />
+    <div>
+        @* <select multiple="multiple" size="5" id="chkPlaces">
+            <option value="54,-110,pointer_green03.png">Option 1</option>
+            <option value="54,-119,pointer_green03.png">Option 2</option>
+            <option value="56,-109,pointer_green03.png">Option 3</option>
+            <option value="56,-114,pointer_green03.png">Option 4</option>
+            <option value="57,-112,pointer_green03.png">Option 5</option>
+            <option value="58,-111,pointer_red03.png">Option 6</option>
+        </select>*@ @*<select multiple="multiple" size="5" id="chkPlaces">
+            <option value="Canada, Alberta, 75 Street Edmonton;pointer_green03.png">75 Street Edmonton,
+                Alberta, Canada</option>
+            <option value="Canada, Calgary, Avenue Southeast;pointer_green03.png">Avenue Southeast,
+                Calgary, Canada</option>
+            <option value="Canada, Vancouver, British Columbia;pointer_red03.png">British Columbia,
+                Vancouver, Canada</option>
+        </select>*@ @*<input type="button" id="btnShowMap" value="Show Map" />*@ @*<textarea id="txtProspect" style="width: 400px;"></textarea>*@
+        @*<textarea id="txtCustomer" style="width: 400px;"></textarea>*@
+    </div>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA9n50_qW-ytUoFSg19i8YRsO8zEF8PeF8&sensor=false">
+    </script>
+    <script type="text/javascript" src="/Assets/Scripts/jquery-1.8.2.js"></script>
+    <script type="text/javascript" src="/Assets/Scripts/googleMap.js"></script>
+</body>
+</html>
